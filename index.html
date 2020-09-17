@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Space Oddity</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
+
+    </head>
+    <body>
+        <main>
+            <nav>
+                <a href="index.html"><img id ="status-icon" src="Materials/icon-menu-1.png"></a>
+                <a href="chooseShip.html"><img id ="spacecraft-icon" src="Materials/icon-menu-2.png"></a>
+                <a href="teamBuild.html"><img id ="teamBuild-icon" src="Materials/icon-menu-3.png"></a>
+                <a href="checkWeather.html"><img id ="weather-icon" src="Materials/icon-menu-4.png"></a>
+            </nav>
+           
+            <section class ="status-inf">
+                <button class = "go-button-disabled">Поехали!</button>
+                <p><span>Статус</span></p> <hr> 
+                <div class = "indicator-off"></div> <text>Ракета выбрана</text> <br>
+                <div class = "indicator-off"></div> <text>Команда выбрана</text> <br>
+                <div class = "indicator-on"></div> <text>Погода - ок</text> <br>
+            </section>
+            
+
+            <section class ="weather-inf">
+                <p><span>Погодные условия</span></p> <hr> 
+                <div class = "list">
+                    <p><span>Локация</span> <text>Космодром Северный</text></p> <hr>
+                    <p><span>Температура</span> <text>+15</text></p> <hr>
+                    <p><span>Влажность</span> <text>70%</text></p> <hr>
+                    <p><span>Ветер</span> <text>5 м/с, СЗ</text></p>
+                </div>
+            </section>
+
+            <section class ="team-inf">
+                <p><span>Экипаж</span></p> <hr> 
+                <div class = "list">
+                    <p><span>Капитан</span> <text>Констанстин Константинопольский</text></p> <hr>
+                    <p><span>Борт инженер</span> <text>Иван Иванов</text></p> <hr>
+                    <p><span>Врач</span> <text>Петр Петров</text></p> <hr>
+                    <p><span>Космодесантник</span> <text>Анастасия Преображенская</text></p> 
+                </div>
+            </section>
+            <img id ="bg-img-planets" src="Materials/bg-img-top.png">
+            <img id ="bg-img-rocket" src="Materials/bg-img-rocket.png">
+        </main>
+        <script src="main.js"></script>
+    </body>
+</html>
