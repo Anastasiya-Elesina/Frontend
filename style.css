@@ -24,15 +24,17 @@ nav{
 nav img{
     position: absolute;
     margin: 19%;
-    opacity: 0.75;
+    opacity: 0.6;
 }
 nav img:hover{
+    opacity: 1;
+}
+nav img.active{
     opacity: 1;
 }
 #status-icon{
     top: 5%;
     bottom: 85%;
-    opacity: 1;
 }
 main{ 
     position: absolute;
