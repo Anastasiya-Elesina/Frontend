@@ -71,11 +71,11 @@ section{
     height: 172px;
     top: 48px;
 }
-.weather-inf{
+#weather-inf{
     height: 260px;
     top: 266px;
 }
-.team-inf{
+#team-inf{
     height: 260px;
     top: 577px;
 }
@@ -103,53 +103,53 @@ section{
 .status-inf p,div{
     margin-left: 25px;
 }
-.weather-inf p,.team-inf p{
-    margin-left: 25px;
-}
 hr{
     border: 0.5px solid #D8DCE3;
     margin-left: 0;
 }
 /* Общие стили секций погодных условий и экипажа*/
 
-.weather-inf p span,.team-inf p span{ 
+.section-inf p span{ 
     font-weight: bold;
 } 
-.weather-inf .list, .team-inf .list{
+.section-inf p{
+    margin-left: 25px;
+}
+.section-inf .list{
     margin-top: 22px;
     width: 505px;
     height: 135px;
 }
-.weather-inf .list *, .team-inf .list *{
+.section-inf .list *{
     margin-left: 10px;
 }
-.weather-inf .list p, .team-inf .list p{
+.section-inf .list p{
     margin: 0;
     padding: 0;
 }
-.weather-inf .list hr, .team-inf .list hr{
+.section-inf .list hr{
     margin: 6px 0px 6px 0px;
 }
-.weather-inf .list span, .team-inf .list span{
+.section-inf .list span{
     font-weight: bold;
     display:inline-block;
     width: 165px;
 }
 /* Секция погодных условий */
-.weather-inf .list span{
+#weather-inf .list span{
     color: #0A5499;
 }
 /* Секция состава команды */
-.team-inf .list p:nth-of-type(1) span {
+#team-inf .list p:nth-of-type(1) span {
     color: #FF7D84;
 }
-.team-inf .list p:nth-of-type(2) span {
+#team-inf .list p:nth-of-type(2) span {
     color: #E69F54;
 }
-.team-inf .list p:nth-of-type(3) span {
+#team-inf .list p:nth-of-type(3) span {
     color: #64D03F;
 }
-.team-inf .list p:nth-of-type(4) span {
+#team-inf .list p:nth-of-type(4) span {
     color: #5A95F2;
 }
 
