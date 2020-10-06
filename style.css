@@ -36,7 +36,7 @@ nav img.active{
 nav img.inactive{
     opacity: 0.6;
 }
-#status-icon{
+img#status{
     top: 5%;
     bottom: 85%;
 }
@@ -186,7 +186,8 @@ button {
 }
 /* Дополнительные страницы */
 h1{
-    margin:0;
+    margin-left: 152px;
+    margin-top: 52px;
     font-size: 48px;
     line-height: 56px;
 }
