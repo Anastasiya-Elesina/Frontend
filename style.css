@@ -4,6 +4,8 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
+    margin:0;
+    padding:0;
 }
 body{
     background-image: url(Materials/Background.jpg);
@@ -24,13 +26,15 @@ nav{
 nav img{
     position: absolute;
     margin: 19%;
-    opacity: 0.6;
 }
 nav img:hover{
     opacity: 1;
 }
 nav img.active{
     opacity: 1;
+}
+nav img.inactive{
+    opacity: 0.6;
 }
 #status-icon{
     top: 5%;
@@ -57,15 +61,24 @@ main{
     left: 770px;
     top: 430px; 
 }
+.enable{
+    display: initial;
+}
+.disable{
+    display: none;
+}
 /* Sections */
-section{
+ol{
     position: absolute;
     background: #FFFFFF;
     border-radius: 10px;
     width: 560px;
-    left: 161px;
+    left: 142px;
 
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+}
+li{
+    list-style-type: none;
 }
 .status-inf{
     height: 172px;
@@ -80,76 +93,68 @@ section{
     top: 577px;
 }
 /* Секция статусов */
-.status-inf span,text{ 
+.status-inf li,h6{ 
     font-weight: 500;
 }
-.status-inf text{
-    font-family: 'Poppins', sans-serif;
-    line-height: 27px;
+.status-inf h6{ 
+    border-bottom: 0.5px solid #D8DCE3;
+    padding: 15px 0px 15px 25px;
 }
-.status-inf div{ 
+.status-inf li::before{ 
+    content: '';
     display:inline-block;
     width: 14px; 
     height: 14px;
     border-radius: 50%;
 }
-.indicator-on{
-    background: #73E24D;
+.status-inf li.indicator-on::before{ 
+    background-color: #73E24D;
 }
-.indicator-off{
-    background: #FF7D84;
+.status-inf li.indicator-off::before{ 
+    background-color: #FF7D84;
 }
-/* Общие стили 3-х секций */
-.status-inf p,div{
-    margin-left: 25px;
+.status-inf li{
+    margin: 5px 0px 0px 25px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 27px;
 }
-hr{
-    border: 0.5px solid #D8DCE3;
-    margin-left: 0;
-}
-/* Общие стили секций погодных условий и экипажа*/
 
-.section-inf p span{ 
+/* Вторая и третья секции */
+.section-inf h6{ 
+    border-bottom: 0.5px solid #D8DCE3;
+    padding: 15px 0px 15px 25px;
     font-weight: bold;
-} 
-.section-inf p{
+}
+.section-inf li{
+    width: 487px;
+    border-bottom: 0.5px solid #D8DCE3;
+    padding: 8px 0px 8px 5px;
     margin-left: 25px;
 }
-.section-inf .list{
-    margin-top: 22px;
-    width: 505px;
-    height: 135px;
-}
-.section-inf .list *{
-    margin-left: 10px;
-}
-.section-inf .list p{
-    margin: 0;
-    padding: 0;
-}
-.section-inf .list hr{
-    margin: 6px 0px 6px 0px;
-}
-.section-inf .list span{
-    font-weight: bold;
+.section-inf li span{
     display:inline-block;
+    font-weight: bold;
     width: 165px;
 }
+.section-inf li:nth-of-type(1) {
+    margin-top: 22px;
+}
+
 /* Секция погодных условий */
-#weather-inf .list span{
+#weather-inf li span{
     color: #0A5499;
 }
 /* Секция состава команды */
-#team-inf .list p:nth-of-type(1) span {
+#team-inf li:nth-of-type(1) span {
     color: #FF7D84;
 }
-#team-inf .list p:nth-of-type(2) span {
+#team-inf li:nth-of-type(2) span {
     color: #E69F54;
 }
-#team-inf .list p:nth-of-type(3) span {
+#team-inf li:nth-of-type(3) span {
     color: #64D03F;
 }
-#team-inf .list p:nth-of-type(4) span {
+#team-inf li:nth-of-type(4) span {
     color: #5A95F2;
 }
 
@@ -166,28 +171,40 @@ button {
     align-items: center;
     text-align: center; 
 
-    color: #999999;
 }
-.go-button-enabled{
+.button-enabled{
     background: #73E24D;
+    color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
-.go-button-disabled {
+.button-disabled {
     background: #E4E4E4;
     box-shadow: 0px 4px 4px rgba(224, 224, 224, 0.904);
-    
+    color: #999999;
     border-radius: 10px;
 }
 /* Дополнительные страницы */
 h1{
-    position: absolute;
-    width: 700px;
-    height:56px;
-    left: 182px;
-    top: 65px;
-
     margin:0;
     font-size: 48px;
     line-height: 56px;
+}
+/*ShooseShip*/
+.radio-button{
+    text-align: center;
+    line-height:  36px;
+    margin:0;
+
+    background: #D1E1FA;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 0px 0px 10px 10px;
+}
+.radio {
+	width: 16px;
+	height: 16px;
+    margin: 0 3px 0 0;
+    background: #FFFFFF;
+    border: 1px solid #000000;
 }

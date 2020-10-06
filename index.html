@@ -16,38 +16,50 @@
         <main>
             <nav id = "menu" class = "menu">
                 <a href="index.html"><img id ="status-icon" class = "active" src="Materials/icon-menu-1.png"></a>
-                <a href="chooseShip.html"><img id ="spacecraft-icon" src="Materials/icon-menu-2.png"></a>
-                <a href="teamBuild.html"><img id ="teamBuild-icon" src="Materials/icon-menu-3.png"></a>
-                <a href="checkWeather.html"><img id ="weather-icon" src="Materials/icon-menu-4.png"></a>
+                <a href="#"><img id ="spacecraft-icon"  class = "inactive" src="Materials/icon-menu-2.png"></a>
+                <a href="#"><img id ="teamBuild-icon" class = "inactive" src="Materials/icon-menu-3.png"></a>
+                <a href="#"><img id ="weather-icon" class = "inactive" src="Materials/icon-menu-4.png"></a>
             </nav>
-           
-            <section class ="status-inf">
-                <button class = "go-button-disabled">Поехали!</button>
-                <p><span>Статус</span></p> <hr> 
-                <div class = "indicator-off"></div> <text>Ракета выбрана</text> <br>
-                <div class = "indicator-off"></div> <text>Команда выбрана</text> <br>
-                <div class = "indicator-on"></div> <text>Погода - ок</text> <br>
-            </section>
+
+           <section class = "mainPage enable">
             
+                <ol class ="status-inf">
+                    <h6>Статус</h6> 
+                    <button class = "button-disabled">Поехали!</button>
+                    <li class = "indicator-off"> Ракета выбрана</li>
+                    <li class = "indicator-off"> Команда выбрана</li>
+                    <li class = "indicator-on"> Погода - ок</li>
+                </ol>
+                
 
-            <section class ="section-inf" id = "weather-inf">
-                <p><span>Погодные условия</span></p> <hr> 
-                <div class = "list">
-                    <p><span>Локация</span> <text>Космодром Северный</text></p> <hr>
-                    <p><span>Температура</span> <text>+15</text></p> <hr>
-                    <p><span>Влажность</span> <text>70%</text></p> <hr>
-                    <p><span>Ветер</span> <text>5 м/с, СЗ</text></p>
-                </div>
+                <ol class ="section-inf" id = "weather-inf">
+                    <h6>Погодные условия</h6>
+                    <li> <span>Локация</span> <text>Космодром Северный</text> </li>
+                    <li> <span>Температура</span> <text>+15</text> </li>
+                    <li> <span>Влажность</span> <text>70%</text> </li>
+                    <li> <span>Ветер</span> <text>5 м/с, СЗ</text> </li>
+                </ol>
+
+                <ol class ="section-inf" id = "team-inf">
+                    <h6>Экипаж</h6>
+                    <li> <span>Капитан</span> <text>Констанстин Константинопольский</text> </li>
+                    <li> <span>Борт инженер</span> <text>Иван Иванов</text> </li>
+                    <li> <span>Врач</span> <text>Петр Петров</text></li>
+                    <li> <span>Космодесантник</span> <text>Анастасия Преображенская</text> </li>
+                </ol>
+
             </section>
 
-            <section class ="section-inf"  id = "team-inf">
-                <p><span>Экипаж</span></p> <hr> 
-                <div class = "list">
-                    <p><span>Капитан</span> <text>Констанстин Константинопольский</text></p> <hr>
-                    <p><span>Борт инженер</span> <text>Иван Иванов</text></p> <hr>
-                    <p><span>Врач</span> <text>Петр Петров</text></p> <hr>
-                    <p><span>Космодесантник</span> <text>Анастасия Преображенская</text></p> 
-                </div>
+            <section class = "chooseShipPage disable">
+                <h1>Выбор корабля</h1>
+            </section>
+
+            <section class = "checkWeatherPage disable">
+
+            </section>
+
+            <section class = "teamBuildPage disable">
+
             </section>
             <img id ="bg-img-planets" src="Materials/bg-img-top.png">
             <img id ="bg-img-rocket" src="Materials/bg-img-rocket.png">
