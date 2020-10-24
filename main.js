@@ -1,4 +1,3 @@
-
 let menu = document.getElementById('menu');
 menu.addEventListener("click", function(event){
     // Обработка кнопок меню
@@ -25,5 +24,57 @@ menu.addEventListener("click", function(event){
     let activatedSection = document.querySelector(`.${classSection}`);
     activatedSection.classList.remove("disable");
     activatedSection.classList.add("enable");
-
 });
+
+function findElement(selector, numOfElement=1){
+    if (numOfElement == 1)
+        return document.querySelector(`${selector}`);
+    return document.querySelectorAll(`${selector}`)[numOfElement-1];
+}
+
+let name, speed, teamNumber, imgSrc;
+let chosenShip = findElement('.chooseShip-page .section-inf');
+let curRocket;
+UpdateDataCard(1);//обновляем переменные чтобы они содержали актуальную информацию
+
+let buttonCreateShip = document.getElementById('button-create-rocket');
+buttonCreateShip.addEventListener("click", function(event){
+    curRocket = new Rocket (name, speed, teamNumber,imgSrc);
+});
+
+function UpdateDataCard(num){
+    //Получаем номер активированной карточки с ракетой и обновляем данные в глобальных переменных
+    let shipCard = findElement('.shipCard', num);
+    name = shipCard.querySelector('ol li:nth-of-type(1) span:last-child').textContent;
+    speed = shipCard.querySelector('ol li:nth-of-type(2) span:last-child').textContent;
+    teamNumber = shipCard.querySelector('ol li:nth-of-type(3) span:last-child').textContent;
+    imgSrc = shipCard.querySelector('img').src;
+}
+function UpdateViewCard(){
+    //Меняем информацию в самом верхнем блоке в соответствии с номером карточки корабля
+    chosenShip.querySelector('ol li:nth-of-type(1) span:last-child').textContent = name;;
+    chosenShip.querySelector('ol li:nth-of-type(2) span:last-child').textContent = speed;
+    chosenShip.querySelector('ol li:nth-of-type(3) span:last-child').textContent = teamNumber;
+    chosenShip.querySelector('img').src = imgSrc;
+}
+//Обработка событий радио-кнопок: ловим события с помощью jQuery
+$('input[type="radio"]').on('change', function(event) {
+    UpdateDataCard(Number(event.target.value));
+    UpdateViewCard();  
+});
+class Rocket{
+    teamNumber
+    speed
+    name
+    iconSrc
+
+    constructor(name, speed, teamNumber, iconSrc){
+        this.name = name;
+        this.speed = speed;
+        this.teamNumber = teamNumber;
+        this.iconSrc = iconSrc;
+    }
+    launch(){
+        
+    }
+}

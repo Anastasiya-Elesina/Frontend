@@ -10,7 +10,8 @@
             href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
-
+        
+        <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
     </head>
     <body >
         <main>
@@ -22,36 +23,95 @@
             </nav>
 
            <section class = "status-page enable">
-            
-                <ol class ="status-inf">
+
+                <div class ="status-inf">
                     <h6>Статус</h6> 
                     <button class = "button-disabled">Поехали!</button>
-                    <li class = "indicator-off"> Ракета выбрана</li>
-                    <li class = "indicator-off"> Команда выбрана</li>
-                    <li class = "indicator-on"> Погода - ок</li>
-                </ol>
-                
+                    <ol>
+                        <li class = "indicator-off"> Ракета выбрана</li>
+                        <li class = "indicator-off"> Команда выбрана</li>
+                        <li class = "indicator-on"> Погода - ок</li>
+                    </ol>
+                </div>
 
-                <ol class ="section-inf" id = "weather-inf">
+                <div class ="section-inf" id = "weather-inf">
                     <h6>Погодные условия</h6>
-                    <li> <span>Локация</span> <text>Космодром Северный</text> </li>
-                    <li> <span>Температура</span> <text>+15</text> </li>
-                    <li> <span>Влажность</span> <text>70%</text> </li>
-                    <li> <span>Ветер</span> <text>5 м/с, СЗ</text> </li>
-                </ol>
+                    <ol>
+                        <li> <span>Локация</span> <span>Космодром Северный</span> </li>
+                        <li> <span>Температура</span> <span>+15</span> </li>
+                        <li> <span>Влажность</span> <span>70%</span> </li>
+                        <li> <span>Ветер</span> <span>5 м/с, СЗ</span> </li>
+                    </ol>
+                </div>
 
-                <ol class ="section-inf" id = "team-inf">
+                <div class ="section-inf" id = "team-inf">
                     <h6>Экипаж</h6>
-                    <li> <span>Капитан</span> <text>Констанстин Константинопольский</text> </li>
-                    <li> <span>Борт инженер</span> <text>Иван Иванов</text> </li>
-                    <li> <span>Врач</span> <text>Петр Петров</text></li>
-                    <li> <span>Космодесантник</span> <text>Анастасия Преображенская</text> </li>
-                </ol>
+                    <ol>
+                        <li> <span>Капитан</span> <span>Констанстин Константинопольский</span> </li>
+                        <li> <span>Борт инженер</span> <span>Иван Иванов</span> </li>
+                        <li> <span>Врач</span> <span>Петр Петров</span></li>
+                        <li> <span>Космодесантник</span> <span>Анастасия Преображенская</span> </li>
+                    </ol>
+                </div>
 
+                <img id ="bg-img-planets" src="Materials/bg-img-top.png">
+                <img id ="bg-img-rocket" src="Materials/bg-img-rocket.png">
             </section>
 
             <section class = "chooseShip-page disable">
                 <h1> Выбор корабля</h1>
+
+                <div class ="section-inf">
+                    <h6>Корабль</h6> 
+                    <button class = "button-enabled" id = "button-create-rocket">Собрать ракету</button>
+                    <img class ="ship-icon" src="Materials/rocket-1.png">
+                    <ol>
+                        <li class = "border-none"> <span>Имя</span> <span>Сокол-345</span> </li>
+                        <li class = "border-none"> <span>Скорость</span> <span>8 км/с</span> </li>
+                        <li class = "border-none"> <span>Экипаж</span> <span>2</span> </li>
+                    </ol>
+                </div>
+
+                <div class = "grid-container">
+                    <div class ="section-inf shipCard">
+                        <img class ="ship-icon" src="Materials/rocket-2.png">
+                        <ol>
+                            <li> <span>Имя</span> <span>Ургсок-123</span> </li>
+                            <li> <span>Скорость</span> <span>6 км/с</span> </li>
+                            <li> <span>Экипаж</span> <span>4</span> </li>
+                        </ol>
+                        <div class = 'radio-button'>       
+                            <input type="radio" name = "shipCard" value="1" class="radio" id="radio-1" >
+                            <label for="radio-1"></label>Выбрать</label>
+                        </div>
+                    </div>
+
+                    <div class ="section-inf shipCard">
+                        <img class ="ship-icon" src="Materials/rocket-3.png">
+                        <ol>
+                            <li> <span>Имя</span> <span>Клинк-123</span> </li>
+                            <li> <span>Скорость</span> <span>5 км/с</span> </li>
+                            <li> <span>Экипаж</span> <span>3</span> </li>
+                        </ol>
+                        <div class = 'radio-button'>       
+                            <input type="radio" name = "shipCard" value="2" class="radio" id="radio-2">
+                            <label for="radio-2">Выбрать</label>
+                        </div>
+                    </div>
+
+                    <div class ="section-inf shipCard">
+                        <img class ="ship-icon" src="Materials/rocket-1.png">
+                        <ol>
+                            <li> <span>Имя</span> <span>Сокол-345</span> </li>
+                            <li> <span>Скорость</span> <span>8 км/с</span> </li>
+                            <li> <span>Экипаж</span> <span>2</span> </li>
+                        </ol>
+                        <div class = 'radio-button'>       
+                            <input type="radio" name = "shipCard" value="3" class="radio" id="radio-3">
+                            <label for="radio-3">Выбрать</label>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section class = "checkWeather-page disable">
@@ -61,9 +121,9 @@
             <section class = "teamBuild-page disable">
                 <h1> Сбор команды</h1>
             </section>
-            <img id ="bg-img-planets" src="Materials/bg-img-top.png">
-            <img id ="bg-img-rocket" src="Materials/bg-img-rocket.png">
+            
         </main>
         <script src="main.js"></script>
+        <!-- <script src="chooseShip.js"></script> -->
     </body>
 </html>
