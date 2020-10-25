@@ -8,10 +8,10 @@
 
 3) Здесь использовала jQuery чтобы отлавливать события, есть ли способ написать подобное на чистом JS? Я так понимаю addEventListener необходимо привязывать к определенному элементу, но если их несколько (получается группа), которая обрабатывается одинакого, например одной функцией, можно ли навесить на группу обработчик не обходя всю группу циклом? Или использовать jQuery - самый оптимальный способ?
 
-**
-    $('input[type="radio"]').on('change', function(event) {
-        updateDataCard(Number(event.target.value));
-        updateViewCard();  
-    });
-**
+```
+$('input[type="radio"]').on('change', function(event) {
+    updateDataCard(Number(event.target.value));
+    updateViewCard();  
+});
+```
 
