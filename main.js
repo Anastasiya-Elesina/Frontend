@@ -26,6 +26,9 @@ menu.addEventListener("click", function(event){
     activatedSection.classList.add("enable");
 });
 
+
+
+
 function findElement(selector, numOfElement=1){
     if (numOfElement == 1)
         return document.querySelector(`${selector}`);
